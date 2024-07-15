@@ -111,9 +111,8 @@ def user_mode():
     greet(chosen_name, greetings_dict, chosen_lang)
 
 if __name__ == '__main__':
-    # Add debugging statement
     user_input = input("Press 1 for Admin mode or 2 for User mode: ")
-    try:
+    try:  #try-except handles the "Value Error" if the input cannot be converted to an error 
         mode = int(user_input)
     except ValueError:
         print(f"Invalid input: {user_input}. Please enter 1 or 2.")
